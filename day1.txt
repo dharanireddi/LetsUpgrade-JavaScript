@@ -1,0 +1,102 @@
+---------------------------Day 01------------------------
+
+
+1)Explore and explain the various methods in console functions.Explain them
+
+-Console Print
+<void> rconsoleprint(<string> message)
+Prints message into the console. rconsoleprint also supports colors.
+
+-Console Info
+<void> rconsoleinfo(<string> message)
+Prints message into the console, with a info text before it.
+
+-Console Warn
+<void> rconsolewarn(<string> message)
+Prints message into the console, with a warning text before it.
+
+-Console Error
+<void> rconsoleerr(<string> message)
+Prints message into the console, with a error text before it.
+
+-Console Clear
+<void> rconsoleclear(<void>)
+Clears the console.
+
+-Console Name
+<void> rconsolename(<string> title)
+Sets the currently allocated console title to title.
+
+-Console Input
+<string> rconsoleinput(<void>)
+Yields until the user inputs information into their console. Returns the input they put in.
+
+-Print Console
+<void> printconsole(<string> message, <byte> red, <byte> green, <byte> blue)
+Prints message into the internal and integrated console with RGB value. To view the internal console, enable Internal UI in the Options menu and when in-game press INSERT on your keyboard. The integrated console can be found in the new synapse UI.
+
+---------------------------------------------------------
+ 2) Write the difference between var,let and const with code examples.
+
+In Javascript one can define variables using the keywords var, let or const.
+var a=10;
+let b=20;
+const PI=3.14;
+var: The scope of a variable defined with the keyword "var" is limited to the "function" within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is "function scoped".
+code:
+ var greeter = "hey hi";
+    var times = 4;
+
+    if (times > 3) {
+        var greeter = "say Hello instead"; 
+    }
+    
+    console.log(greeter) // "say Hello instead"
+
+let: The scope of a variable defined with the keyword "let" or "const" is limited to the “block” defined by curly braces i.e. {} .
+"let" and "const" are "block scoped".
+code:
+let greeting = "say Hi";
+    if (true) {
+        let greeting = "say Hello instead";
+        console.log(greeting); // "say Hello instead"
+    }
+    console.log(greeting); // "say Hi"
+
+const: The scope of a variable defined with the keyword "const" is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+"const" cannot be re-assigned to a new value. However it CAN be mutated.
+code:
+ const greeting = {
+        message: "say Hi",
+        times: 4
+    }
+
+---------------------------------
+
+3) Write a breif intro on available datatypes in JavaScript.
+
+JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+1.Primitive data type
+2.Non-primitive (reference) data type
+
+1.JavaScript primitive data types
+There are five types of primitive data types in JavaScript. They are as follows:
+
+Data Type	            Description
+String	                represents sequence of characters e.g. "hello"
+Number           	represents numeric values e.g. 100
+Boolean	                represents boolean value either false or true
+Undefined	        represents undefined value
+Null	                represents null i.e. no value at all
+
+2.JavaScript non-primitive data types
+The non-primitive data types are as follows:
+
+Data Type	           Description
+Object	               represents instance through which we can access members
+Array                  represents group of similar values
+RegExp	               represents regular expression
+
+---------------------------------------
