@@ -1,0 +1,106 @@
+2)Explain with examples the remaining methods of String and Array
+
+-----------String Methods--------
+-Searching for a String in a String
+The search() method searches a string for a specified value and returns the position of the match:
+
+Example
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+
+The substring() Method
+substring() is similar to slice().
+
+The difference is that substring() cannot accept negative indexes.
+
+Example
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);
+
+-The substr() Method
+substr() is similar to slice().
+The difference is that the second parameter specifies the length of the extracted part.
+
+Example
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);
+
+-The replace() method replaces a specified value with another value in a string:
+
+Example
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "LetsUpgrade");
+
+-The concat() Method
+concat() joins two or more strings:
+
+Example
+var text1 = "Hello";
+var text2 = "World";
+var text3 = text1.concat(" ", text2);
+
+The concat() method can be used instead of the plus operator. These two lines do the same:
+
+Example
+var text = "Hello" + " " + "World!";
+var text = "Hello".concat(" ", "World!");
+
+-String.trim()
+The trim() method removes whitespace from both sides of a string:
+
+Example
+var str = "       Hello World!        ";
+alert(str.trim());
+
+-The charCodeAt() Method
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).
+
+Example
+var str = "HELLO WORLD";
+
+str.charCodeAt(0);         // returns 72
+
+---------------Array Methods-----------------
+
+-Converting Arrays to Strings
+The JavaScript method toString() converts an array to a string of (comma separated) array values.
+
+Example
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+The join() method also joins all array elements into a string.
+
+It behaves just like toString(), but in addition you can specify the separator:
+
+Example
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+-Deleting Elements
+Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
+
+Example
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];           // Changes the first element in fruits to undefined
+
+-Using splice() to Remove Elements
+With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+
+Example
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);        // Removes the first element of fruits
+
+-Slicing an Array
+The slice() method slices out a piece of an array into a new array.
+
+This example slices out a part of an array starting from array element 1 ("Orange"):
+
+Example
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1);
+
+
+
